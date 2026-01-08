@@ -11,6 +11,11 @@ config_version=5
 [application]
 
 config/name="SCP: Field (prototype)"
-run/main_scene="uid://c0a06ffr75s2m"
+run/main_scene="uid://d3dm6x0s1tpgm"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"

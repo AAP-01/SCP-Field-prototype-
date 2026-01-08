@@ -30,3 +30,31 @@ var callsigns: Array[String] = [
 	"Yttrium",
 	"Zeta"		# 25 position
 ]
+
+var mtf_names: Array[String] = [
+	"Alpha",	# 0 position
+	"Beta",
+	"Gamma",
+	"Delta",
+	"Epsilon",
+	"Zeta",
+	"Eta",
+	"Theta",
+	"Iota",
+	"Kappa",
+	"Lambda",
+	"Mu",
+	"Nu",
+	"Xi",
+	"Omicron",
+	"Pi",
+	"Rho",
+	"Sigma",
+	"Tau",
+	"Upsilon",
+	"Phi",
+	"Chi",
+	"Psi",
+	"Omega"		# 23 position
+	
+]
