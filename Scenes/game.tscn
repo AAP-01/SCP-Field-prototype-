@@ -11,10 +11,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Game Manager" type="Node" parent="."]
+[node name="UI" type="Node" parent="."]
 
-[node name="Background" type="TextureRect" parent="."]
-layout_mode = 1
+[node name="Background" type="TextureRect" parent="UI"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -22,8 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ebmjs")
 
-[node name="Menu" type="Button" parent="."]
-layout_mode = 1
+[node name="Menu" type="Button" parent="UI"]
 anchors_preset = -1
 anchor_right = 0.065000005
 anchor_bottom = 0.116000004
@@ -32,4 +30,12 @@ offset_bottom = -0.16799927
 text = "EXIT"
 script = ExtResource("2_qxrlw")
 
-[connection signal="pressed" from="Menu" to="Menu" method="_on_pressed"]
+[node name="Game Managers" type="Node" parent="."]
+
+[node name="Event Manager" type="Node" parent="Game Managers"]
+
+[node name="Combat Manager" type="Node" parent="Game Managers"]
+
+[node name="Team Manager" type="Node" parent="Game Managers"]
+
+[connection signal="pressed" from="UI/Menu" to="UI/Menu" method="_on_pressed"]

@@ -14,8 +14,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_phjps")
 
-[node name="Background" type="TextureRect" parent="."]
-layout_mode = 1
+[node name="UI" type="Node" parent="."]
+
+[node name="Background" type="TextureRect" parent="UI"]
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -23,8 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_yhd87")
 
-[node name="Title" type="Label" parent="."]
-layout_mode = 1
+[node name="Title" type="Label" parent="UI"]
 anchors_preset = -1
 anchor_left = 0.043
 anchor_top = 0.07700001
@@ -37,8 +37,7 @@ offset_bottom = 0.07199097
 theme_override_font_sizes/font_size = 75
 text = "SCP: FIELD"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
+[node name="VBoxContainer" type="VBoxContainer" parent="UI"]
 anchors_preset = -1
 anchor_left = 0.043
 anchor_top = 0.27
@@ -50,17 +49,17 @@ offset_right = -0.040008545
 offset_bottom = -0.03201294
 theme_override_constants/separation = 4
 
-[node name="Start" type="Button" parent="VBoxContainer"]
+[node name="Start" type="Button" parent="UI/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "START"
 script = ExtResource("2_yhd87")
 
-[node name="Quit" type="Button" parent="VBoxContainer"]
+[node name="Quit" type="Button" parent="UI/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "QUIT"
 script = ExtResource("3_l7vjj")
 
-[connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer/Start" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer/Quit" to="VBoxContainer/Quit" method="_on_pressed"]
+[connection signal="pressed" from="UI/VBoxContainer/Start" to="UI/VBoxContainer/Start" method="_on_pressed"]
+[connection signal="pressed" from="UI/VBoxContainer/Quit" to="UI/VBoxContainer/Quit" method="_on_pressed"]

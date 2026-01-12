@@ -1,7 +1,7 @@
 extends Node
 #MTF naming convention as as follows:
 #Mobile Task Force [Greek letter]-[number] [nickname] [callsign]-[number]
-#Mobile Task Force Alpha-1 "Red Right Hand" Beta-2
+#Mobile Task Force Alpha-1 "Red Right Hand" Boron-2
 var callsigns: Array[String] = [
 	"Alpha",		# 0 position
 	"Boron",
@@ -9,7 +9,7 @@ var callsigns: Array[String] = [
 	"Delta",
 	"Epsilon",
 	"Foxtrot",
-	"Golf",
+	"Goa",
 	"Havoc",
 	"India",
 	"Juliett",
@@ -57,4 +57,22 @@ var mtf_names: Array[String] = [
 	"Psi",
 	"Omega"		# 23 position
 	
+]
+
+var numbers: Array[int] = [
+	1,		# 0 position
+	2,
+	3,
+	4,
+	5,
+	6,
+	7,
+	8,
+	9,
+	10,
+	11,
+	12,
+	13,
+	14,
+	15		# 14 position
 ]

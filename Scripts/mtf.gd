@@ -1,6 +1,6 @@
 extends Label
 
-@onready var name_list: Node = $"Name List"
+@onready var name_list: Node = $"../../Name List"
 
 func _ready() -> void:
 	var team_name = name_list.mtf_names

@@ -14,8 +14,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Background" type="TextureRect" parent="."]
-layout_mode = 1
+[node name="UI" type="Node" parent="."]
+
+[node name="Background" type="TextureRect" parent="UI"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -23,8 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_svgrw")
 
-[node name="Understood" type="Button" parent="."]
-layout_mode = 1
+[node name="Understood" type="Button" parent="UI"]
 anchors_preset = -1
 anchor_left = 0.347
 anchor_top = 0.772
@@ -40,8 +40,7 @@ theme_override_font_sizes/font_size = 50
 text = "UNDERSTOOD"
 script = ExtResource("2_nnr0v")
 
-[node name="Objective" type="Label" parent="."]
-layout_mode = 1
+[node name="Objective" type="Label" parent="UI"]
 anchors_preset = -1
 anchor_left = 0.18900001
 anchor_top = 0.46800002
@@ -57,8 +56,7 @@ theme_override_font_sizes/font_size = 30
 text = "OBJECTIVE: GET IN, FIND ANOMALY, GET OUT"
 horizontal_alignment = 1
 
-[node name="MTF" type="Label" parent="."]
-layout_mode = 1
+[node name="MTF" type="Label" parent="UI"]
 anchors_preset = -1
 anchor_left = 0.24700001
 anchor_top = 0.523
@@ -74,9 +72,9 @@ text = "YOU WILL ASSUME CONTROL OF MOBILE TASK FORCE ZETA-9 ."
 horizontal_alignment = 1
 script = ExtResource("3_1f1xm")
 
-[node name="Name List" parent="MTF" instance=ExtResource("4_8aqlb")]
-
 [node name="Team Creator" type="Node" parent="."]
 script = ExtResource("5_nnr0v")
 
-[connection signal="pressed" from="Understood" to="Understood" method="_on_pressed"]
+[node name="Name List" parent="." instance=ExtResource("4_8aqlb")]
+
+[connection signal="pressed" from="UI/Understood" to="UI/Understood" method="_on_pressed"]
