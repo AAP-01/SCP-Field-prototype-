@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cw4ufm80kbvmw"]
+[gd_scene load_steps=5 format=3 uid="uid://cw4ufm80kbvmw"]
 
+[ext_resource type="Script" uid="uid://nkxf24lpyhax" path="res://Scripts/team_creator.gd" id="1_3dryh"]
 [ext_resource type="Texture2D" uid="uid://84sgepsb7om2" path="res://Assets/Background.jpg" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://dlu8vog7mhk8x" path="res://Scripts/menu.gd" id="2_qxrlw"]
+[ext_resource type="Script" uid="uid://c6yg7tpcdwbm8" path="res://Scripts/team_manager.gd" id="3_wrm1d"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -10,6 +12,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Team Creator" type="Node" parent="."]
+script = ExtResource("1_3dryh")
+
+[node name="Game Managers" type="Node" parent="."]
+
+[node name="Event Manager" type="Node" parent="Game Managers"]
+
+[node name="Combat Manager" type="Node" parent="Game Managers"]
+
+[node name="Team Manager" type="Node" parent="Game Managers"]
+script = ExtResource("3_wrm1d")
 
 [node name="UI" type="Node" parent="."]
 
@@ -29,13 +43,5 @@ offset_right = 0.11999512
 offset_bottom = -0.16799927
 text = "EXIT"
 script = ExtResource("2_qxrlw")
-
-[node name="Game Managers" type="Node" parent="."]
-
-[node name="Event Manager" type="Node" parent="Game Managers"]
-
-[node name="Combat Manager" type="Node" parent="Game Managers"]
-
-[node name="Team Manager" type="Node" parent="Game Managers"]
 
 [connection signal="pressed" from="UI/Menu" to="UI/Menu" method="_on_pressed"]

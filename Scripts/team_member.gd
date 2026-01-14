@@ -13,6 +13,9 @@ var number
 func _ready() -> void:
 	generate_name()
 	
+	#Debugging
+	print("READY FIRED (MEMBER)")
+	
 func generate_name():
 	var callsigns = name_list.callsigns
 	var numbers = name_list.numbers
@@ -23,14 +26,12 @@ func generate_name():
 	print("Current force: " + str(set_force()))
 	print("---")
 
+func set_member_name(callsign_roll, number_roll):
+	callsign = callsign_roll
+	number = number_roll
+
 func is_alive() -> bool:
 	return health > 0 and sanity > 0
-
-func set_callsign(callsign_roll):
-	callsign = callsign_roll
-
-func set_member_number(number_roll):
-	number = number_roll
 
 func set_force():
 	var force = base_force * ((health + sanity)/(2 * maximum_health))
