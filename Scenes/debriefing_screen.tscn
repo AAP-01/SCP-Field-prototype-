@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c6jpcklawakx6"]
 
-[ext_resource type="Texture2D" uid="uid://84sgepsb7om2" path="res://Assets/Background.jpg" id="1_svgrw"]
+[ext_resource type="Texture2D" uid="uid://84sgepsb7om2" path="res://Assets/Images/Background.jpg" id="1_svgrw"]
 [ext_resource type="Script" uid="uid://1lpub7pwx38i" path="res://Scripts/starts_game(understood).gd" id="2_nnr0v"]
 [ext_resource type="Script" uid="uid://cmuwsk6lk6cfl" path="res://Scripts/mtf.gd" id="3_1f1xm"]
 

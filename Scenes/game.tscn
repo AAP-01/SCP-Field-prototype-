@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cw4ufm80kbvmw"]
+[gd_scene load_steps=9 format=3 uid="uid://cw4ufm80kbvmw"]
 
 [ext_resource type="Script" uid="uid://nkxf24lpyhax" path="res://Scripts/team_creator.gd" id="1_3dryh"]
-[ext_resource type="Texture2D" uid="uid://84sgepsb7om2" path="res://Assets/Background.jpg" id="1_ebmjs"]
+[ext_resource type="Texture2D" uid="uid://84sgepsb7om2" path="res://Assets/Images/Background.jpg" id="1_ebmjs"]
+[ext_resource type="Script" uid="uid://bqrbrm8c1pier" path="res://Scripts/event_manager.gd" id="2_i6g32"]
 [ext_resource type="Script" uid="uid://dlu8vog7mhk8x" path="res://Scripts/menu.gd" id="2_qxrlw"]
+[ext_resource type="Script" uid="uid://b48gdf2tkske7" path="res://Scenes/combat_manager.gd" id="3_1l0tm"]
 [ext_resource type="Script" uid="uid://c6yg7tpcdwbm8" path="res://Scripts/team_manager.gd" id="3_wrm1d"]
+[ext_resource type="Texture2D" uid="uid://sna0sgyjwnsy" path="res://icon.svg" id="5_wowpa"]
+[ext_resource type="Script" uid="uid://ds71uj3g25ney" path="res://Scripts/team_list_member_names.gd" id="7_h4fw4"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -19,8 +23,10 @@ script = ExtResource("1_3dryh")
 [node name="Game Managers" type="Node" parent="."]
 
 [node name="Event Manager" type="Node" parent="Game Managers"]
+script = ExtResource("2_i6g32")
 
 [node name="Combat Manager" type="Node" parent="Game Managers"]
+script = ExtResource("3_1l0tm")
 
 [node name="Team Manager" type="Node" parent="Game Managers"]
 script = ExtResource("3_wrm1d")
@@ -37,11 +43,241 @@ texture = ExtResource("1_ebmjs")
 
 [node name="Menu" type="Button" parent="UI"]
 anchors_preset = -1
-anchor_right = 0.065000005
-anchor_bottom = 0.116000004
-offset_right = 0.11999512
-offset_bottom = -0.16799927
+anchor_left = 0.42000002
+anchor_right = 0.58000004
+anchor_bottom = 0.048
+offset_left = 0.15997314
+offset_right = -0.16003418
+offset_bottom = -0.10400009
+grow_horizontal = 2
 text = "EXIT"
 script = ExtResource("2_qxrlw")
 
+[node name="Team List" type="VBoxContainer" parent="UI"]
+anchors_preset = -1
+anchor_left = 0.043
+anchor_top = 0.725
+anchor_right = 0.21300001
+anchor_bottom = 0.92700005
+offset_left = 0.4639969
+offset_top = -399.80002
+offset_right = -0.37602234
+offset_bottom = -399.69604
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+script = ExtResource("7_h4fw4")
+
+[node name="MTF name" type="Label" parent="UI/Team List"]
+layout_mode = 2
+text = "MTF ALPHA-1"
+horizontal_alignment = 1
+
+[node name="Legend" type="HBoxContainer" parent="UI/Team List"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Member" type="Label" parent="UI/Team List/Legend"]
+layout_mode = 2
+text = "MEMBER"
+
+[node name="Health" type="Label" parent="UI/Team List/Legend"]
+layout_mode = 2
+text = "HEALTH"
+
+[node name="Sanity" type="Label" parent="UI/Team List/Legend"]
+layout_mode = 2
+text = "SANITY"
+
+[node name="Member 1" type="HBoxContainer" parent="UI/Team List"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Member" type="Label" parent="UI/Team List/Member 1"]
+layout_mode = 2
+text = "ALPHA-1"
+horizontal_alignment = 1
+
+[node name="Health" type="Label" parent="UI/Team List/Member 1"]
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 1
+
+[node name="Sanity" type="Label" parent="UI/Team List/Member 1"]
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 1
+
+[node name="Member 2" type="HBoxContainer" parent="UI/Team List"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Member" type="Label" parent="UI/Team List/Member 2"]
+layout_mode = 2
+text = "ALPHA-1"
+horizontal_alignment = 1
+
+[node name="Health" type="Label" parent="UI/Team List/Member 2"]
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 1
+
+[node name="Sanity" type="Label" parent="UI/Team List/Member 2"]
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 1
+
+[node name="Member 3" type="HBoxContainer" parent="UI/Team List"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Member" type="Label" parent="UI/Team List/Member 3"]
+layout_mode = 2
+text = "ALPHA-1"
+horizontal_alignment = 1
+
+[node name="Health" type="Label" parent="UI/Team List/Member 3"]
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 1
+
+[node name="Sanity" type="Label" parent="UI/Team List/Member 3"]
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 1
+
+[node name="Member 4" type="HBoxContainer" parent="UI/Team List"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Member" type="Label" parent="UI/Team List/Member 4"]
+layout_mode = 2
+text = "ALPHA-1"
+horizontal_alignment = 1
+
+[node name="Health" type="Label" parent="UI/Team List/Member 4"]
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 1
+
+[node name="Sanity" type="Label" parent="UI/Team List/Member 4"]
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 1
+
+[node name="Communications Log" type="VScrollBar" parent="UI"]
+anchors_preset = -1
+anchor_left = 0.23900001
+anchor_top = 0.52500004
+anchor_right = 0.499
+anchor_bottom = 0.91
+offset_left = -0.32800293
+offset_top = -0.2000122
+offset_right = 0.15197754
+offset_bottom = 0.32000732
+
+[node name="Event" type="VBoxContainer" parent="UI"]
+anchors_preset = -1
+anchor_left = 0.521
+anchor_top = 0.108
+anchor_right = 0.95500004
+anchor_bottom = 0.88600004
+offset_left = -0.1920166
+offset_top = 0.01599884
+offset_right = -0.16003418
+offset_bottom = -0.12805176
+theme_override_constants/separation = 50
+
+[node name="Event Presenter" type="Panel" parent="UI/Event"]
+custom_minimum_size = Vector2(500, 250)
+layout_mode = 2
+
+[node name="Event Text" type="Label" parent="UI/Event/Event Presenter"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.030000001
+anchor_top = 0.19900002
+anchor_right = 0.96900004
+anchor_bottom = 0.80100006
+offset_left = 0.24999905
+offset_top = 0.06862259
+offset_right = 0.24996948
+offset_bottom = -0.06864929
+grow_horizontal = 2
+grow_vertical = 2
+text = "INSERT EVENT HERE LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM LOREM IPSUM "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Choice Buttons" type="VBoxContainer" parent="UI/Event"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Event/Choice Buttons"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Button" type="Button" parent="UI/Event/Choice Buttons/HBoxContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+text = "CHOICE 1"
+autowrap_mode = 2
+
+[node name="Button2" type="Button" parent="UI/Event/Choice Buttons/HBoxContainer"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+text = "CHOICE 2
+"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/Event/Choice Buttons"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Button" type="Button" parent="UI/Event/Choice Buttons/HBoxContainer2"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+text = "CHOICE 3
+"
+
+[node name="Button2" type="Button" parent="UI/Event/Choice Buttons/HBoxContainer2"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+text = "CHOICE 4
+"
+
+[node name="Video Feed" type="Panel" parent="UI"]
+anchors_preset = -1
+anchor_left = 0.23900001
+anchor_top = 0.108
+anchor_right = 0.499
+anchor_bottom = 0.49100003
+offset_left = -0.32800293
+offset_top = 0.01599884
+offset_right = 0.15197754
+offset_bottom = 1.8319702
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/Video Feed"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="UI/Video Feed/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_wowpa")
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="event_happened" from="Game Managers/Event Manager" to="Game Managers/Team Manager" method="_on_event_manager_event_happened"]
 [connection signal="pressed" from="UI/Menu" to="UI/Menu" method="_on_pressed"]

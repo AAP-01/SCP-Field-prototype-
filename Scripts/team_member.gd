@@ -11,10 +11,9 @@ var callsign
 var number
 
 func _ready() -> void:
-	generate_name()
-	
 	#Debugging
 	print("READY FIRED (MEMBER)")
+	generate_name()
 	
 func generate_name():
 	var callsigns = name_list.callsigns

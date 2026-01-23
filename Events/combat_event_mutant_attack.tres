@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CombatEventData" load_steps=2 format=3 uid="uid://b3jj6jrfvjlja"]
+
+[ext_resource type="Script" uid="uid://4nb8t3j0252g" path="res://Scripts/combat_event_data.gd" id="1_6oa4f"]
+
+[resource]
+script = ExtResource("1_6oa4f")
+event_text = "A mutant has ambushed the team."
+choices = {
+"Fight": 1,
+"Flee": 2
+}
+difficulty = 10
+metadata/_custom_type_script = "uid://4nb8t3j0252g"

@@ -25,6 +25,7 @@ func create_team_member():
 func create_member_name():
 	member.set_member_name(randi_range(0, 23), randi_range(0, 14))
 	
+#Sets the name for the element in the array
 func set_element_name() -> String:
 	member_name = str(NameList.callsigns[member.callsign]) + "-" + str(NameList.numbers[member.number])
 	return member_name

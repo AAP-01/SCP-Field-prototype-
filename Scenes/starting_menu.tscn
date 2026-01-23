@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d3dm6x0s1tpgm"]
 
 [ext_resource type="Script" uid="uid://brs8vgywxwtp4" path="res://Scripts/minimun_window_size(starting_menu).gd" id="1_phjps"]
-[ext_resource type="Texture2D" uid="uid://84sgepsb7om2" path="res://Assets/Background.jpg" id="1_yhd87"]
+[ext_resource type="Texture2D" uid="uid://84sgepsb7om2" path="res://Assets/Images/Background.jpg" id="1_yhd87"]
 [ext_resource type="Script" uid="uid://fe0h5fuu8og1" path="res://Scripts/start.gd" id="2_yhd87"]
 [ext_resource type="Script" uid="uid://dhtlx30a1oism" path="res://Scripts/quit.gd" id="3_l7vjj"]
 
@@ -17,7 +17,7 @@ script = ExtResource("1_phjps")
 [node name="UI" type="Node" parent="."]
 
 [node name="Background" type="TextureRect" parent="UI"]
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2

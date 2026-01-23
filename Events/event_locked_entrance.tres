@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=2 format=3 uid="uid://dbyj1xx7e5yel"]
+
+[ext_resource type="Script" uid="uid://bjd70cs5j4sa7" path="res://Scripts/event_data.gd" id="1_6kq0f"]
+
+[resource]
+script = ExtResource("1_6kq0f")
+event_text = "The team has found the entrance of the bunker. The gate appears to totally locked down."
+choices = {
+"Breach the entrance": 2,
+"Find another way": 1
+}
+metadata/_custom_type_script = "uid://bjd70cs5j4sa7"

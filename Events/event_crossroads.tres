@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EventData" load_steps=2 format=3 uid="uid://dg26a4nuji7y2"]
+
+[ext_resource type="Script" uid="uid://bjd70cs5j4sa7" path="res://Scripts/event_data.gd" id="1_j10hl"]
+
+[resource]
+script = ExtResource("1_j10hl")
+id = 1
+event_text = "The team has stumbled into a hallway intersection leading to 3 areas as indicated on a sign."
+choices = {
+"Go left": 1,
+"Go right": 3,
+"Go straight": 2
+}
+metadata/_custom_type_script = "uid://bjd70cs5j4sa7"

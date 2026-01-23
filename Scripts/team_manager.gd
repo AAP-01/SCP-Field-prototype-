@@ -3,24 +3,17 @@ extends Node
 var team_array = TeamList.team
 
 func _ready() -> void:
-	remove_dead_member()
-	set_member_health()
-	set_member_sanity()
+	member_status()
 	
 	#Debugging
 	print(TeamList.team)
+	print("Team size: " + str(TeamList.team.size()))
 	if TeamList.team.size() != 4:
-		print("BROKEN (NO OR INCORRECT ELEMENTS)")
+		print("ERROR: NO OR INCORRECT ELEMENT SIZE")
 
-func remove_dead_member():
-	for member in team_array:
-		if member.health == 0:
-			print(str(member.name) + ": DEAD")
-		else:
-			print(str(member.name) + ": ALIVE")
+func member_status():
+	# Checks member's status
+	pass
 
-func set_member_health():
-	pass
-	
-func set_member_sanity():
-	pass
+func _on_event_manager_event_happened() -> void:
+	pass # Replace with function body.

@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 NameList="*res://Scripts/name_list.gd"
+TeamList="*res://Scripts/team_list.gd"
+EventList="*res://Scripts/event_list.gd"
 
 [display]
 
